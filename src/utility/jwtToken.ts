@@ -4,11 +4,11 @@ const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET || 'accessTokenSecret'
 const refreshTokenSecret =
   process.env.REFRESH_TOKEN_SECRET || 'refreshAccessToken'
 
-export const accessToken = (userId: string) => {
+export const getAccessToken = (userId: string) => {
   return jwt.sign({ userId }, accessTokenSecret, { expiresIn: '15m' })
 }
 
-export const refreshToken = (userId: string) => {
+export const getRefreshToken = (userId: string) => {
   return jwt.sign({ userId }, refreshTokenSecret, { expiresIn: '7d' })
 }
 

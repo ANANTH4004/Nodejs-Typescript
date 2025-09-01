@@ -1,11 +1,10 @@
 {
   "name": "auth-jwt-token",
   "version": "1.0.0",
-  "description": "Authendication using JWT token - Typescript",
+  "description": "Authentication using JWT token - Typescript",
   "main": "dist/app.js",
-  "type": "module",
   "scripts": {
-    "dev": "nodemon -r ts-node/register src/app.ts",
+    "dev": "npx ts-node src/app.ts",
     "build": "tsc",
     "start": "node --env-file=.env dist/app.js"
   },
